@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <title>分頁音量放大神器 - 雙核心旗艦版</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <header class="header">
+      <div class="title-group">
+        <span class="icon">🔊</span>
+        <h2>分頁音量放大器</h2>
+      </div>
+      <span id="badge" class="badge badge-off">尚未啟用</span>
+    </header>
+
+    <!-- 模式選擇切換列 -->
+    <div class="mode-selector">
+      <button id="modeTabBtn" class="mode-btn active" title="適用於優管、音樂網站等一般頁面">一般全域模式</button>
+      <button id="modeInjectBtn" class="mode-btn" title="適用於網飛、迪士尼等受版權保護的串流平台">網飛相容模式</button>
+    </div>
+
+    <main class="content">
+      <div class="volume-display">
+        <span id="volumePercent" class="percent-text">100%</span>
+        <span id="modeDescription" class="sub-text">目前放大倍率（全域模式）</span>
+      </div>
+
+      <div class="slider-wrapper">
+        <input type="range" id="volumeSlider" min="0" max="600" step="5" value="100">
+        <div class="scale-marks">
+          <span>0%</span>
+          <span>100%</span>
+          <span>300%</span>
+          <span>600%</span>
+        </div>
+      </div>
+
+      <div class="protection-info">
+        <span class="shield-icon">🛡️</span>
+        <span class="shield-desc">雙核心動態壓縮防破音保護運作中</span>
+      </div>
+
+      <div class="button-group">
+        <button id="toggleBtn" class="btn btn-primary">啟動放大音量</button>
+        <button id="resetBtn" class="btn btn-secondary">重設回 100%</button>
+      </div>
+
+      <div id="noticeBox" class="notice-box hidden">
+        <span id="noticeText"></span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span id="tabTitle" class="tab-title">正在讀取當前分頁...</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

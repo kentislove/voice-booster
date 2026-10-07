@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "分頁音量放大神器",
+  "version": "1.0.0",
+  "description": "精準捕捉指定分頁聲音，並進行等比例音量放大與防破音保護",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "分頁音量放大器",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

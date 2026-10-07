@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <title>分頁音量放大神器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <header class="header">
+      <div class="title-group">
+        <span class="icon">🔊</span>
+        <h2>分頁音量放大器</h2>
+      </div>
+      <span id="badge" class="badge badge-off">尚未啟用</span>
+    </header>
+
+    <main class="content">
+      <div class="volume-display">
+        <span id="volumePercent" class="percent-text">100%</span>
+        <span class="sub-text">目前放大倍率</span>
+      </div>
+
+      <div class="slider-wrapper">
+        <input type="range" id="volumeSlider" min="0" max="600" step="5" value="100">
+        <div class="scale-marks">
+          <span>0%</span>
+          <span>100%</span>
+          <span>300%</span>
+          <span>600%</span>
+        </div>
+      </div>
+
+      <div class="protection-info">
+        <span class="shield-icon">🛡️</span>
+        <span class="shield-desc">已啟動智慧防破音與平滑壓縮保護</span>
+      </div>
+
+      <div class="button-group">
+        <button id="toggleBtn" class="btn btn-primary">啟動放大音量</button>
+        <button id="resetBtn" class="btn btn-secondary">重設回 100%</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span id="tabTitle" class="tab-title">正在讀取當前分頁...</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
